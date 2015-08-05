@@ -7,7 +7,7 @@ get '/' do
 end
 
 get '/game' do
-  @game_boolean = params['player_one'].beats?(params['player_two'])
+  @game_boolean = (params['player_one']).beats?(params['player_two'])
   if @game_boolean
     @winner = 'Player one is the winner!'
   elsif @game_boolean == false

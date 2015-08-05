@@ -25,4 +25,8 @@ describe('String#beats?') do
   it 'returns true if scissors is an object and paper is the argument' do
     expect('scissors'.beats?('paper')).to eq(true)
   end
+
+  it 'gives correct result with capitalized input' do
+    expect('Scissors'.beats?('Paper')).to(eq(true))
+  end
 end
