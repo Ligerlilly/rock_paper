@@ -8,7 +8,7 @@ end
 
 get '/game' do
   @game_boolean = (params['player_one']).beats?(params['player_two'])
-  if @game_boolean
+  if @game_boolean == true
     @winner = 'Player one is the winner!'
   elsif @game_boolean == false
     @winner = 'Player two is the winner!'
@@ -16,4 +16,8 @@ get '/game' do
     @winner = "<a href='/'>Try again</a>"
   end
   erb(:game)
+end
+
+get '/robot' do
+  erb(:robot)
 end

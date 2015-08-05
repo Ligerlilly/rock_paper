@@ -32,3 +32,11 @@ describe 'the rock_paper path', { type: :feature } do
     expect(page).to have_content("Player one enter Rock")
   end
 end
+
+describe 'the robot path', {type: :feature} do
+  it 'creates a random input for the robot and takes the users input' do
+    visit '/'
+    click_link 'Want to play a robot?'
+    expect(page).to have_content("Player One vs Robot")
+  end
+end
