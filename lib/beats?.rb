@@ -1,5 +1,7 @@
 class String
   define_method(:beats?) do |other|
+    self.downcase!
+    other.downcase!
     if self == "rock" && other == "scissors"
       true
     elsif self == "scissors" && other == "rock"
@@ -12,6 +14,8 @@ class String
       false
     elsif self == 'scissors' && other == 'paper'
       true
+    elsif self == other
+      'try_again'
     end
   end
 end

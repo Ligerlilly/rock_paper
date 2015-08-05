@@ -11,4 +11,14 @@ describe 'the rock_paper path', { type: :feature } do
     click_button 'Send'
     expect(page).to have_content('Player one is the winner!')
   end
+
+  it 'displays link to try again if inproper input is entered' do
+    visit '/'
+    fill_in 'player_one', with: 'cat'
+    fill_in 'player_two', with: 'dog'
+    click_button 'Send'
+    expect(page).to have_content('Try again')
+    click_link 'Try again'
+    expect(page).to have_content("Player one enter Rock")
+  end
 end
