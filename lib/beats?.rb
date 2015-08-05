@@ -6,6 +6,8 @@ class String
       false
     elsif self == "rock" && other == "paper"
       false
+    elsif self == 'paper' && other == 'rock'
+      true
     end
   end
 end
