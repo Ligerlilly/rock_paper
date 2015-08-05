@@ -4,6 +4,8 @@ class String
       true
     elsif self == "scissors" && other == "rock"
       false
+    elsif self == "rock" && other == "paper"
+      false
     end
   end
 end
