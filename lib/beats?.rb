@@ -10,6 +10,8 @@ class String
       true
     elsif self == 'paper' && other == 'scissors'
       false
+    elsif self == 'scissors' && other == 'paper'
+      true
     end
   end
 end
