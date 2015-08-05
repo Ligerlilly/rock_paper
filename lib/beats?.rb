@@ -8,6 +8,8 @@ class String
       false
     elsif self == 'paper' && other == 'rock'
       true
+    elsif self == 'paper' && other == 'scissors'
+      false
     end
   end
 end
